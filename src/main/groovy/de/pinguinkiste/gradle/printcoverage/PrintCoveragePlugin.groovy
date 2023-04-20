@@ -1,4 +1,4 @@
-package de.jansauer.printcoverage
+package de.pinguinkiste.gradle.printcoverage
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project

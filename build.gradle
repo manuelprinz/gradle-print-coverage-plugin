@@ -1,13 +1,14 @@
 plugins {
-  id 'com.palantir.git-version' version '0.11.0'
+  id 'com.palantir.git-version' version '0.15.0'
   id 'groovy'
   id 'java-gradle-plugin'
+  id 'maven-publish'
   id 'jacoco'
-  id 'com.gradle.plugin-publish' version '0.10.1'
+  id 'com.gradle.plugin-publish' version '0.21.0'
 }
 
 description = 'Gradle print coverage plugin'
-group = 'de.jansauer.printcoverage'
+group = 'de.pinguinkiste.gradle'
 version = gitVersion()
 
 sourceCompatibility = 1.8
@@ -24,15 +25,16 @@ dependencies {
 }
 
 pluginBundle {
-  website = 'https://github.com/jansauer/gradle-print-coverage-plugin'
-  vcsUrl = 'https://github.com/jansauer/gradle-print-coverage-plugin'
-  description = 'Gradle print coverage plugin.'
-  tags = ['coverage', 'jacoco', 'gitlab']
+  website = 'https://github.com/manuelprinz/gradle-print-coverage-plugin#readme'
+  vcsUrl = 'https://github.com/manuelprinz/gradle-print-coverage-plugin'
+  description = 'A Gradle plugin that prints the test coverage to the console log. (Forked from de.jansauer.printcoverage.)'
+  tags = ['coverage', 'jacoco', 'gitlab', 'testing']
 
   plugins {
-    greetingsPlugin {
-      id = 'de.jansauer.printcoverage'
-      displayName = 'Gradle print coverage plugin'
+    printCoveragePlugin {
+      id = 'de.pinguinkiste.printcoverage'
+      displayName = 'Plugin to print the test coverage'
+      description = 'A Gradle plugin that prints the test coverage to the console log. (Forked from de.jansauer.printcoverage.)'
     }
   }
 }

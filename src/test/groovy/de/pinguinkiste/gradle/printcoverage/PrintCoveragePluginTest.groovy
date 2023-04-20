@@ -1,4 +1,4 @@
-package de.jansauer.printcoverage
+package de.pinguinkiste.gradle.printcoverage
 
 import org.gradle.internal.impldep.org.junit.Rule
 import org.gradle.internal.impldep.org.junit.rules.TemporaryFolder
@@ -41,7 +41,7 @@ class PrintCoveragePluginTest extends Specification {
     given:
     buildFile << """
         plugins {
-          id 'de.jansauer.printcoverage'
+          id 'de.pinguinkiste.printcoverage'
         }
     """
 
@@ -65,7 +65,7 @@ class PrintCoveragePluginTest extends Specification {
     buildFile << """
         plugins {
           id 'jacoco'
-          id 'de.jansauer.printcoverage'
+          id 'de.pinguinkiste.printcoverage'
         }
     """
     reportFile << new File("src/test/resources/jacocoTestReport.xml").text
@@ -92,7 +92,7 @@ class PrintCoveragePluginTest extends Specification {
         plugins {
           id 'java'
           id 'jacoco'
-          id 'de.jansauer.printcoverage'
+          id 'de.pinguinkiste.printcoverage'
         }
         
         repositories {
@@ -138,7 +138,7 @@ class PrintCoveragePluginTest extends Specification {
         plugins {
           id 'java'
           id 'jacoco'
-          id 'de.jansauer.printcoverage'
+          id 'de.pinguinkiste.printcoverage'
         }
         
         repositories {
@@ -195,7 +195,7 @@ class PrintCoveragePluginTest extends Specification {
     buildFile << """
         plugins {
           id 'jacoco'
-          id 'de.jansauer.printcoverage'
+          id 'de.pinguinkiste.printcoverage'
         }
     """
 
@@ -220,7 +220,7 @@ class PrintCoveragePluginTest extends Specification {
     buildFile << """
         plugins {
           id 'jacoco'
-          id 'de.jansauer.printcoverage'
+          id 'de.pinguinkiste.printcoverage'
         }
         
         printcoverage {
